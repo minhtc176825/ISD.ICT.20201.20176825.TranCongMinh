@@ -1,0 +1,76 @@
+Event flows 
+
+# | Doer     | Action
+1 | Customer | requests to add media to cart
+2 | Software | prompts a pop-up screen for customer to enter the number of this product.
+3 | Customer | enters the number of products they want
+4 | Customer | submit to add media to cart
+5 | Software | checks if this media existed or not; if existed, just increase the number of this media
+		in the cart; if not, add to the cart
+6 | Software | displays the cart and a pop-up window to inform customer that added successfully
+
+Alternative Flows
+
+# | Doer     | Action
+  | Customer | cancels the requests
+3a| Customer | exits from entering the number of products
+
+
+-------------------------------------------------------------
+Use case "Add media to cart"
+
+Basic flow of events
+
+# | Doer     | Action
+1 | Customer | selects a media, enter the number of media and requests to add to cart
+2 | Software | checks if the media is available
+3 | Software | adds the media to cart
+4 | Software | update the number of media in the cart
+
+Alternative flow of events 
+
+Location | Doer      | Condition | Action					  | Resume location
+ Step 2  | Software  |           | notifies there are not enough media to add | the use case ends
+
+-------------------------------------------------------------
+* Response time = Transmission time + processing time + waiting time
+
+-------------------------------------------------------------
+
+Use case "Place order"
+
+Basic flow of events 
+
+
+# | Doer     | Action
+1 | Customer | requests to place the order
+2 | Software | checks if there is any cart running on the system
+3 | Software | asks for customer's placing order confirmation
+2 | Software | checks if medias in the cart are available
+3 | Software | places order
+4 | Software | asks for customer's payment confirmation
+
+Alternative flow of events
+
+Location | Condition | Action
+	 | Customer  | cancels the order
+Step 2   | Software  | notifies there are not enough media to place order
+Step 4   | Customer  | decline to pay
+
+-------------------------------------------------------------
+
+Use case "Pay order"
+
+Basic flow of events
+
+# | Doer     | Action
+1 | Software | asks for customer's payment confirmation
+2 | Customer | decide to pay
+3 | Software |
+
+Hoàn thiện AIMS astah
+Use case in specification (tabular & activity ) cho : 
+- add media to cart
+- place order
+- pay order
+
